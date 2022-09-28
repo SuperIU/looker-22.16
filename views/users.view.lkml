@@ -71,7 +71,11 @@ view: users {
   measure: count {
     type: count
     drill_fields: [detail*]
-  }
+    html:
+    <ul>
+    <li>Value: {{ rendered_value }} </li>
+    </ul> ;;
+    }
 
   # ----- Sets of fields for drilling ------
   set: detail {

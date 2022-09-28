@@ -36,6 +36,10 @@ view: orders {
   measure: count {
     type: count
     drill_fields: [detail*]
+    html: {{ rendered_value }}
+    <ul>
+    <li>Value: {{ rendered_value }} </li>
+    </ul> ;;
   }
 
   # ----- Sets of fields for drilling ------
