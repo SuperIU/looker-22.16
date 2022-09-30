@@ -22,10 +22,26 @@ view: orders {
     sql: ${TABLE}.created_at ;;
   }
 
+  dimension: start_date {
+    group_label: "Start"
+    type: date
+    convert_tz: no
+    sql: ${TABLE}.status ;;
+    html:  {{ rendered_value | date: "%h e%, Y%" }} ;;
+  }
+
+  dimension: start_time {
+    group_label: "Start"
+    type: string
+    convert_tz: no
+    sql: TO_TIMESTAMP_NTZ(${TABLE}.created_at) ;;
+    html:  {{ rendered_value | date: "%h e%, Y% I%:M% P%" }} ;;
+    }
+
   dimension: status {
     type: string
-    sql: ${TABLE}.status ;;
-  }
+    sql: TO_TIMESTAMP_NTZ(${TABLE}.created_at) ;;
+    }
 
   dimension: user_id {
     type: number
