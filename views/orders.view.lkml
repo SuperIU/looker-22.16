@@ -24,23 +24,25 @@ view: orders {
 
   dimension: start_date {
     group_label: "Start"
+    label: "Start Date"
     type: date
     convert_tz: no
-    sql: ${TABLE}.status ;;
-    html:  {{ rendered_value | date: "%h e%, Y%" }} ;;
+    sql: ${created_date} ;;
+    html:{{ value | date: "%h %e, %Y" }};;
   }
 
   dimension: start_time {
     group_label: "Start"
-    type: string
+    label: "Start Time"
+    type: date_time
     convert_tz: no
-    sql: TO_TIMESTAMP_NTZ(${TABLE}.created_at) ;;
-    html:  {{ rendered_value | date: "%h e%, Y% I%:M% P%" }} ;;
+    sql: ${TABLE}.created_at ;;
+    html:{{ value | date: "%h %e, %Y %I:%M %P" }};;
     }
 
   dimension: status {
     type: string
-    sql: TO_TIMESTAMP_NTZ(${TABLE}.created_at) ;;
+    sql: ${TABLE}.status ;;
     }
 
   dimension: user_id {
