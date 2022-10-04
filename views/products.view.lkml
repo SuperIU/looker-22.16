@@ -20,7 +20,11 @@ view: products {
   dimension: category {
     type: string
     sql: ${TABLE}.category ;;
-  }
+    html:
+    {{ linked_value }}
+    <a href="https://www.google.com/search?q={{ value }}" target="_new">
+    <img src=httpshttps://cdn-icons-png.flaticon.com/128/4196/4196707.png" height=12 width=12> </a> ;;
+    }
 
   dimension: department {
     type: string
