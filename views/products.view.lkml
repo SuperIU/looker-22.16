@@ -14,7 +14,7 @@ view: products {
     html:
     {{ linked_value }}
     <a href="https://www.google.com/search?q={{ value }}" target="_new">
-    <img src=https://cdn3.iconfinder.com/data/icons/business-part-2-1/48/Tag-Brand-Cost-Label-Name-Price-512.png" height=15 width=12> </a> ;;
+    <img src=https://cdn3.iconfinder.com/data/icons/business-part-2-1/48/Tag-Brand-Cost-Label-Name-Price-512.png" height=12 width=12> </a> ;;
   }
 
   dimension: category {
