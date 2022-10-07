@@ -59,6 +59,7 @@ view: users {
   }
 
   dimension: state {
+    map_layer_name: us_states
     type: string
     sql: ${TABLE}.state ;;
   }
@@ -68,7 +69,15 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
-  measure: count {
+#  dimension: location {
+#    description: "Location in lat,long coordinates"
+#    type: location
+#    sql_latitude: ${latitude} ;;
+#    sql_longitude: ${longitude} ;;
+#    map_layer_name: us_states
+#  }
+
+    measure: count {
     type: count
     drill_fields: [detail*]
     }
