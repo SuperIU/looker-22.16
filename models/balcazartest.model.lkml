@@ -160,6 +160,9 @@ explore: order_items_vijaya {
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
     relationship: many_to_one
   }
+
+  fields: [inventory_items.product_id, inventory_items.cost, inventory_items.count,
+    order_items_vijaya.order_id, order_items_vijaya.sale_price, order_items_vijaya.count, orders.user_id]
 }
 
 explore: order_status_vijaya {}
