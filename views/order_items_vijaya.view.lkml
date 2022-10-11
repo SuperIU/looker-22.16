@@ -1,5 +1,5 @@
 view: order_items_vijaya {
-  sql_table_name: demo_db.order_items_vijaya ;;
+  sql_table_name: demo_db.order_items ;;
   drill_fields: [id]
 
   dimension: id {
@@ -36,6 +36,10 @@ view: order_items_vijaya {
 
   dimension: sale_price {
     type: number
+    html:
+    <a href="{{ link }}&link_target=OMTerritory&link_id={{id}}&id_column=SOMTerritoryId&name={{value}}" target="_self">
+    <font color="#0176d3">{{ rendered_value }}</font>
+    </a> ;;
     sql: ${TABLE}.sale_price ;;
   }
 
