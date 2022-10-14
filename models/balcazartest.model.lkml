@@ -169,8 +169,6 @@ explore: order_status_vijaya {}
 
 explore: pegdates {}
 
-explore: person {}
-
 explore: persons {}
 
 explore: persons2 {}
