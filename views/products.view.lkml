@@ -9,6 +9,8 @@ view: products {
   }
 
   dimension: brand {
+    label: "Brand"
+    description: "Brand_details"
     type: string
     sql: ${TABLE}.brand ;;
     html:
@@ -18,6 +20,8 @@ view: products {
   }
 
   dimension: category {
+    label: "Category"
+    description: "Category_details"
     type: string
     sql: ${TABLE}.category ;;
     html:
